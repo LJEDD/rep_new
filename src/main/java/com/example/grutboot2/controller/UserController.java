@@ -47,15 +47,6 @@ public class UserController {
             return "redirect:/";
         }
     }
-//    @PostMapping("/new")
-//    public String add(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
-//        if (bindingResult.hasErrors()) {
-//            return "create";
-//        } else {
-//            userService.addUser(user);
-//            return "redirect:/";
-//        }
-//    }
 
     @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable("id") long id) {
@@ -69,11 +60,7 @@ public class UserController {
         return "edit";
     }
 
-//    @GetMapping("edit/{id}")
-//    public String updateUser(@PathVariable("id") long id, Model model) {
-//        model.addAttribute(userService.getUserById(id));
-//        return "edit";
-//    }
+
 
     @PatchMapping("/edit")
     public String update(@Valid User user, BindingResult bindingResult) {
@@ -84,13 +71,6 @@ public class UserController {
             return "redirect:/";
         }
 
-//        @PatchMapping("/edit")
-//        public String update(@Valid User user, BindingResult bindingResult) {
-//            if (bindingResult.hasErrors()) {
-//                return "edit";
-//            } else {
-//                userService.updateUser(user);
-//                return "redirect:/";
-//            }
+
     }
 }
